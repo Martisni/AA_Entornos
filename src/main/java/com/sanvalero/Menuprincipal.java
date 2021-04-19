@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menuprincipal {
+
     Scanner sc = new Scanner(System.in);
 
     private boolean salirMenu = false;
@@ -16,7 +17,7 @@ public class Menuprincipal {
     ArrayList<Tartas> listadoTartas = new ArrayList<>();
     ArrayList<Pan> listadoPan = new ArrayList<>();
 
-    public void menuInicio(){
+    public void menuInicio() {
         do {
             System.out.println("Elige un parametro:\n..........................");
             System.out.println("1) Registra sus articulos");
@@ -29,7 +30,7 @@ public class Menuprincipal {
                     registrarProductos();
                     break;
                 case 2:
-                    //listarArticulos();
+                    listarArticulos();
                     break;
                 case 3:
                     salirMenu = true;
@@ -78,10 +79,10 @@ public class Menuprincipal {
 
         System.out.println("Que cantidad quieres:");
         int cantidad = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("Ingredientes (sin gluten, integral, sin trazas, sin sal)");
         String descripcion = sc.nextLine();
-        sc.nextLine();
 
         Pan pan = new Pan(nombre, tamanio, precio, cantidad, descripcion);
         listadoPan.add(pan);
@@ -101,10 +102,10 @@ public class Menuprincipal {
 
         System.out.println("Cual es su precio:");
         float precio = sc.nextFloat();
+        sc.nextLine();
 
         System.out.println("Ingredientes");
         String descripcion = sc.nextLine();
-        sc.nextLine();
 
         Tartas tartas = new Tartas(nombre, sabor, cantidad, precio, descripcion);
         listadoTartas.add(tartas);
@@ -124,14 +125,81 @@ public class Menuprincipal {
 
         System.out.println("Que cantidad quieres:");
         int cantidad = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("Sabores...");
         String descripcion = sc.nextLine();
-        sc.nextLine();
 
         Pasteles pasteles = new Pasteles(nombre, peso, descripcion, precio, cantidad);
         listadoPasteles.add(pasteles);
 
         System.out.println("............................\nPasteles ingresados con éxito\n............................");
+    }
+
+    private void listarArticulos() {
+        boolean volver = false;
+        do {
+            System.out.println("Elige una lista:\n..........................");
+            System.out.println("1) Lista Pasteles");
+            System.out.println("2) Lista Tartas");
+            System.out.println("3) Lista Pan");
+            System.out.println("4) Volver al menu anterior\n............................");
+            int num = sc.nextInt();
+            sc.nextLine();
+
+            switch (num) {
+                case 1:
+                    listadoPasteles();
+                    break;
+                case 2:
+                    listadoTartas();
+                    break;
+                case 3:
+                    listadoPan();
+                    break;
+                case 4:
+                    volver = true;
+                    System.out.println("............................\nVolviendo al menú");
+            }
+        } while (!volver);
+    }
+
+    private void listadoPasteles() {
+        System.out.println("Pasteles ingresadas\n............................");
+
+        for (Pasteles pasteles : listadoPasteles) {
+            System.out.println("Nombre: " + pasteles.getNombre());
+            System.out.println("Peso(gramos): " + pasteles.getPeso());
+            System.out.println("Precio(euros): " + pasteles.getPrecio());
+            System.out.println("Cantidad: " + pasteles.getCantidad());
+            System.out.println("Descripción(sabores, especificaciones...): " + pasteles.getDescripcion());
+            System.out.println("............................");
+        }
+    }
+
+    private void listadoTartas() {
+        System.out.println("Tartas ingresadas\n............................");
+
+        for (Tartas tartas : listadoTartas) {
+            System.out.println("Nombre: " + tartas.getNombre());
+            System.out.println("Sabor(selva, reina...):" + tartas.getSabor());
+            System.out.println("Cantidad: " + tartas.getCantidad());
+            System.out.println("Precio(euros): " + tartas.getPrecio());
+            System.out.println("Ingredientes_extra: " + tartas.getDescripcion());
+            System.out.println("............................");
+        }
+    }
+
+    private void listadoPan() {
+        System.out.println("Pan ingresado\n............................");
+
+        for (Pan pan : listadoPan) {
+            System.out.println("Nombre: " + pan.getNombre());
+            System.out.println("Tamaño (Pequeño, Mediano, Grande): " + pan.getTamanio());
+            System.out.println("Precio(euros): " + pan.getPrecio());
+            System.out.println("Cantidad: " + pan.getCantidad());
+            System.out.println("Ingredientes (sin gluten, integral, sin trazas, sin sal): " + pan.getDescripcion());
+            System.out.println("............................");
+        }
     }
 }
