@@ -1,0 +1,3 @@
+sonar.projectKey=AA_Entornos
+sonar.sources=.
+sonar.java.binaries=target/classes
