@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## Entaban
 
-You can use the [editor on GitHub](https://github.com/Martisni/AA_Entornos/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Tienda panaderia/pasteleria dedicada al bienestar de los clientes. Para el cliente despues de su compra quieran volver. Se puede personalizar el producto depende de sus intolerancias o alergias.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Por eso el empresario necesita esta aplicación para registrar cada productos dependiendo del gusto o las preferencias que quiera cliente.
 
-### Markdown
+### Ejemplo Cliente
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Vamos a exponeros un ejemplo para que veais la situacion del empresario.
 
-```markdown
-Syntax highlighted code block
+```situación
+Situación Selena
 
-# Header 1
-## Header 2
-### Header 3
+# Selena es celiaca
+## Selena es intolerante a la lactosa
+### Selena es alérgica al cacahuete 
 
-- Bulleted
-- List
+- Ella viene y te encargo una barra de pan macerado pero sin gluten.
+- Luego te dice que su cumple y quiere invitar a una tarta a toda su familia.
+- En el registro que hace el dependiente cuando salga un caso parecido no tendra 
+que registrarlo y todo lo que es el calculo de precios ya estara echo.
 
-1. Numbered
-2. List
+- Ella que habra ido a muchas otras tiendas vera que esta se ajusta en su medida.
+- Y volvera.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Información
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Martisni/AA_Entornos/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Esta aplicación sigue en desarrollo continuo. Sigue quieren mas información pueden
+llamarnos o enviarnos un email.
